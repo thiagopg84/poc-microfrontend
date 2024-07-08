@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class Lib1Service {
 
-  name: BehaviorSubject<string> = new BehaviorSubject<string>('teste');
+  name: BehaviorSubject<string> = new BehaviorSubject<string>('valor inicial');
 
   constructor() {
     console.log('Lib1Service construído');
