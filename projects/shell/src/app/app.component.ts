@@ -27,4 +27,16 @@ export class AppComponent implements OnInit {
   changeName(): void {
     this.lib1.name.next('Shell mudou o nome')
   }
+
+  dispatchEvent(): void {
+    const evt = new CustomEvent("shell", {
+      detail: {
+        data: {
+          title: 'Evento do Shell',
+          content: 'Esse evento foi disparado pelo shell.'
+        }
+      }
+    });
+    window.dispatchEvent(evt);
+  }
 }

@@ -21,6 +21,11 @@ export class SampleComponent implements OnInit {
     setTimeout(() => {
       console.log('lendo sessionStorage no MFE: ' + sessionStorage.getItem('test'));
     }, 1000);
+
+    window.addEventListener("shell", function(evt: any) {
+      console.log('Evento interceptado no Sample')
+      console.log(evt.detail.data.content, evt.detail.data.title)
+    }, false);
   }
 
   changeName(): void {
